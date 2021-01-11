@@ -69,7 +69,7 @@ class User(UserMixin, db.Model):
     posts = relationship("BlogPost", back_populates="author")
     comments = relationship("Comment", back_populates="author")
 
-# db.create_all()
+db.create_all()
 
 #Load User
 @login_manager.user_loader
